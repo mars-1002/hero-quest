@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "Oryx";
+  src: url("https://files.catbox.moe/q1iazg.ttf");
+}
+
+*{
+  font-family: "Oryx";
+}
+body {
+  background-color: #383039;
+}
+button {
+  color: #c7ce04;
+  background-color: #60423f;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-items: center;
+  min-width: 480px;
+  max-width: 960px;
+  aspect-ratio: 4/ 3;
+  grid-template-columns: 1fr;
+  grid-template-rows: .1fr .6fr .3fr;
+  border: 5px solid rgb(55, 20, 73);
+}
+
+div {
+  justify-self: stretch;
+}
+#header-menu {
+  background-color: #332934;
+  min-height: 36px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+#stage-text {
+  grid-column: 1;
+  justify-self: start;
+}
+#reset-button {
+  grid-column: 1;
+}
+#sound-btn {
+  grid-column: 3;
+}
+
+#game-menu {
+  background-color: #3b343c;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-height: 432px;
+  max-width: 960;
+}
+
+#start-menu {
+  background-color: #3b343c;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-height: 432px;
+  max-width: 960;
+}
+
+.tile-background {
+  background-image: url("./assets/images/backgroundTile.png");
+}
+
+#main-title-card {
+  height: 108px;
+  width: 360px;
+  grid-column: 2/4;
+  grid-row: 1;
+  justify-self: center;
+}
+
+#main-title-text, #win-screen-text {
+  grid-column: 2/4;
+  grid-row: 2;
+  justify-self: center;
+  color: white;
+}
+
+#player-icon {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+}
+#enemy1 {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: center;
+}
+#enemy2 {
+  grid-column: 4;
+  grid-row: 1;
+  justify-self: center;
+}
+#enemy3 {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: center;
+}
+#enemy4 {
+  grid-column: 4;
+  grid-row: 2;
+  justify-self: center;
+}
+#enemy5 {
+  grid-column: 3;
+  grid-row: 3;
+  justify-self: center;
+}
+#enemy6 {
+  grid-column: 4;
+  grid-row: 3;
+  justify-self: center;
+}
+
+#adventurer-sprite {
+  height: 80%;
+  width: max;
+  
+}
+.enemy-sprite {
+  height: 60%;
+  width: max;
+}
+#arch-wizard-sprite {
+  height: 80%;
+  width: max;
+}
+
+
+.enemy-selected > .enemy-sprite, .enemy-selected > #arch-wizard-sprite{
+  border: 1px solid red;
+}
+#begin-button-menu {
+  background-color: #332934;
+  display: grid;
+  max-width: 960px;
+  max-height: 216px;
+  min-height: 108px;
+  grid-template-columns: .75fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#action-menu {
+  background-color: #332934;
+  display: grid;
+  max-width: 960px;
+  max-height: 216px;
+  min-height: 108px;
+  grid-template-columns: .75fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+#begin-button {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#player-portrait {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  display: flex;
+  justify-content: center;
+}
+#portrait-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#stats {
+  grid-column: 2;
+  grid-row: 3 / 4;
+  font-size: large;
+  color: white;
+}
+#combat-text {
+  grid-column: 2;
+  grid-row: 1 / 2;
+  font-size: large;
+  color: white;
+  justify-self: center;
+}
+#attack {
+  grid-column: 3;
+  grid-row: 1;
+}
+#fireball {
+  grid-column: 3;
+  grid-row: 2;
+}
+#heal {
+  grid-column: 3;
+  grid-row: 3;
+}
+.player-moves-disable {
+  background-color: #1c1413;
+  color:#615e23;
+}
+.dead > *{ 
+  outline: 40px solid rgba(255, 0, 0, 0.5);
+  outline-offset: -40px;
+}
+.dead > #arch-wizard-sprite{ 
+  outline: 55px solid rgba(255, 0, 0, 0.5);
+  outline-offset: -55px;
+}
